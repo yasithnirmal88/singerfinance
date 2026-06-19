@@ -24,7 +24,7 @@ interface PrintSaleData {
 }
 
 interface PrintLayoutProps {
-  saleData: PrintSaleData;
+  saleData: PrintSaleData | Record<string, any>;
 }
 
 const formatCurrency = (value?: number) => {
@@ -44,6 +44,10 @@ const splitDate = (dateStr: string) => {
 
 export const PrintLayout: React.FC<PrintLayoutProps> = ({ saleData }) => {
   if (!saleData) return null;
+
+  const d = saleData as any;
+  const totalRental = d.totalRental ?? d.totalRentalMonthly ?? 0;
+  const term = d.term ?? d.overallTerm ?? '0';
 
   const date = splitDate(saleData.date || '');
   const invNo = saleData.invoiceNo ? saleData.invoiceNo.replace('SF-', '') : '';
@@ -135,7 +139,7 @@ export const PrintLayout: React.FC<PrintLayoutProps> = ({ saleData }) => {
               {saleData.totalCashPrice ? formatCurrency(saleData.totalCashPrice) : '0.00'}
             </div>
             <div className="total-underline">
-              {saleData.totalRental ? formatCurrency(saleData.totalRental) : '0.00'}
+              {totalRental ? formatCurrency(totalRental) : '0.00'}
             </div>
           </div>
 
@@ -144,13 +148,13 @@ export const PrintLayout: React.FC<PrintLayoutProps> = ({ saleData }) => {
               <div className="summary-item">
                 <label>Total Rental<br />(Monthly)</label>
                 <span className="summary-box">
-                  {saleData.totalRental ? formatCurrency(saleData.totalRental) : '0.00'}
+                  {totalRental ? formatCurrency(totalRental) : '0.00'}
                 </span>
               </div>
               <div className="summary-item">
                 <label>Term</label>
                 <div className="term-group">
-                  <span className="term-box">{saleData.term || '0'}</span>
+                  <span className="term-box">{term}</span>
                   <span className="term-unit">M</span>
                 </div>
               </div>
