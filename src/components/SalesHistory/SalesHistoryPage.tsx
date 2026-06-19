@@ -57,7 +57,7 @@ export const SalesHistoryPage: React.FC = () => {
     });
     setTimeout(() => {
       window.print();
-    }, 100);
+    }, 500);
   };
 
   const handleViewDetails = (sale: Sale) => {

@@ -255,11 +255,7 @@ export const NewSalePage: React.FC = () => {
 
   return (
     <>
-      {printSaleData && (
-        <div className="no-print" style={{ display: 'none' }}>
-          <PrintLayout saleData={printSaleData} />
-        </div>
-      )}
+      {printSaleData && <PrintLayout saleData={printSaleData} />}
 
       <div className="new-sale-page">
         <Card title="Create New Sale" className="sale-card">
