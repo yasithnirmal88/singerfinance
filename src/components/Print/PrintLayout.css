@@ -49,8 +49,8 @@
 }
 .stamp-supplier { font-size: 7pt; text-transform: uppercase; border-bottom: 1px solid #4a148c; display: block; margin-bottom: 2px; }
 
-.offer-letter-title { text-align: center; font-size: 13pt; margin: 18px 0 8px 0; text-decoration: underline; }
-.legal-section-title { font-size: 10pt; text-decoration: underline; font-weight: bold; margin: 10px 0 4px 0; }
-.legal-text { font-size: 8.5pt; text-align: justify; line-height: 1.2; }
+.offer-letter-title { text-align: center; font-size: 13pt; margin: 6px 0 6px 0; text-decoration: underline; }
+.legal-section-title { font-size: 10pt; text-decoration: underline; font-weight: bold; margin: 6px 0 2px 0; }
+.legal-text { font-size: 8.5pt; text-align: justify; line-height: 1.15; }
 .legal-list { padding-left: 18px; margin: 0; }
-.legal-list li { margin-bottom: 4px; }
+.legal-list li { margin-bottom: 2px; }

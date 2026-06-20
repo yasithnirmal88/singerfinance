@@ -116,7 +116,7 @@ export const PrintLayout: React.FC<PrintLayoutProps> = ({ saleData }) => {
           </tbody>
         </table>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.3fr 1fr', gap: '10px', marginTop: '14px', alignItems: 'start' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.3fr 1fr', gap: '10px', marginTop: '10px', alignItems: 'start' }}>
           <div>
             <div className="field-row" style={{ marginBottom: '6px' }}>
               <span style={{ fontSize: '8pt', width: '75px' }}>Total Rental<br />(Monthly)</span>
@@ -148,7 +148,7 @@ export const PrintLayout: React.FC<PrintLayoutProps> = ({ saleData }) => {
             </div>
           </div>
 
-          <div style={{ border: '1px solid #000', height: '65px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '9pt', textAlign: 'center', padding: '6px' }}>
+          <div style={{ border: '1px solid #000', height: '85px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '9pt', textAlign: 'center', padding: '6px' }}>
             Singer Finance (Lanka) PLC
           </div>
         </div>
@@ -183,10 +183,10 @@ export const PrintLayout: React.FC<PrintLayoutProps> = ({ saleData }) => {
         <div className="legal-text" style={{ marginTop: '4px' }}>Please return the attached copy of this letter duly signed thereby indicating your understanding and acceptance of the terms and condition under which this facility is granted and of the security which is stipulated herein.</div>
         <div className="legal-text" style={{ marginTop: '4px' }}>We look forward to a mutually beneficial relationship.</div>
 
-        <div style={{ marginTop: '16px', fontSize: '9pt' }}>
+        <div style={{ marginTop: '12px', fontSize: '9pt' }}>
           <div>Your faithfully,<br /><strong>Singer Finance (Lanka) PLC</strong></div>
-          <div style={{ marginTop: '16px' }}>Accepted the terms and conditions of the facility</div>
-          <div style={{ borderTop: '1px dashed #000', marginTop: '6px', width: '60%' }}></div>
+          <div style={{ marginTop: '12px' }}>Accepted the terms and conditions of the facility</div>
+          <div style={{ borderTop: '1px dashed #000', marginTop: '4px', width: '60%' }}></div>
           <div style={{ fontSize: '9pt', marginTop: '2px' }}>Signed by the customer</div>
         </div>
       </div>
