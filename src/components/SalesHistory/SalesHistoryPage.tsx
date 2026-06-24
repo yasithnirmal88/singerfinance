@@ -25,7 +25,6 @@ export const SalesHistoryPage: React.FC = () => {
       totalCashPrice: number;
       totalRental: number;
       term: number;
-      interestRate: number;
     };
   } | null>(null);
 
@@ -52,7 +51,6 @@ export const SalesHistoryPage: React.FC = () => {
         totalCashPrice: sale.totalCashPrice,
         totalRental: sale.totalRentalMonthly,
         term: sale.overallTerm,
-        interestRate: parseFloat((sale.interestRate * 100).toFixed(2)),
       },
     });
     setTimeout(() => {

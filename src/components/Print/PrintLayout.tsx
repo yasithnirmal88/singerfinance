@@ -21,7 +21,6 @@ interface PrintLayoutProps {
     totalCashPrice: number;
     totalRental: number;
     term: number;
-    interestRate: number;
   } | null;
 }
 
@@ -132,8 +131,8 @@ export const PrintLayout: React.FC<PrintLayoutProps> = ({ saleData }) => {
             </div>
             <div className="field-row">
               <span style={{ fontSize: '8pt', width: '75px' }}>Interest Rate<br />(Nominal)</span>
-              <span className="dotted-line" style={{ border: '1px solid #000', height: '16px', textAlign: 'center', lineHeight: '16px', position: 'relative' }}>
-                <span style={{ position: 'absolute', right: '3px', top: '0', fontSize: '7pt', borderLeft: '1px solid #000', paddingLeft: '3px' }}>%</span>
+              <span className="dotted-line interest-rate-box" style={{ border: '1px solid #000', height: '16px', textAlign: 'center', lineHeight: '16px', position: 'relative' }}>
+                <span className="interest-rate-suffix" style={{ position: 'absolute', right: '3px', top: '0', fontSize: '7pt', borderLeft: '1px solid #000', paddingLeft: '3px' }}>%</span>
               </span>
             </div>
           </div>

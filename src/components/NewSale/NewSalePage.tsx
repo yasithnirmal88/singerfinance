@@ -157,7 +157,6 @@ export const NewSalePage: React.FC = () => {
       rental: row.rental,
       term: row.term || overallTerm || 0,
     }));
-    const percentageRate = parseFloat((interestRate * 100).toFixed(2));
     return {
       invoiceNo, date,
       epfNumber: epfNumber || formValues.epfNumber || '',
@@ -168,7 +167,6 @@ export const NewSalePage: React.FC = () => {
       totalCashPrice,
       totalRental: totalRentalMonthly,
       term: overallTerm || 0,
-      interestRate: percentageRate,
     };
   };
 
