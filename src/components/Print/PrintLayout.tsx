@@ -139,7 +139,6 @@ export const PrintLayout: React.FC<PrintLayoutProps> = ({ saleData }) => {
 
           <div style={{ display: 'flex', justifyContent: 'center' }}>
             <div className="stamp-box">
-              <span className="stamp-supplier">Supplier Details</span>
               SINGER Showroom<br />
               No. 91, New Galle Road, Moratuwa.<br />
               (Opposite NSB Bank)<br />
