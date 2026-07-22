@@ -43,9 +43,9 @@
 
 .stamp-box {
   border: 2px dashed #5d4037; color: #4a148c;
-  padding: 5px; text-align: center;
+  padding: 10px 8px; text-align: center;
   font-family: 'Arial Black', sans-serif; font-size: 8pt;
-  line-height: 1.15; max-width: 200px; font-weight: bold;
+  line-height: 1.15; max-width: 240px; font-weight: bold;
 }
 
 .offer-letter-title { text-align: center; font-size: 11.5pt; margin: 8px 0 6px 0; text-decoration: underline; }
