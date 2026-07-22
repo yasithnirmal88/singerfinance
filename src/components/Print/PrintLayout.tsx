@@ -63,7 +63,7 @@ export const PrintLayout: React.FC<PrintLayoutProps> = ({ saleData }) => {
           <div>
             <div className="field-row">
               <span style={{ width: '90px', whiteSpace: 'nowrap' }}>EPF Number</span>:
-              <span className="dotted-line" style={{ fontSize: '16pt', fontWeight: 'bold' }}>
+              <span className="dotted-line" style={{ fontSize: '18pt', fontWeight: 'bold' }}>
                 {saleData.epfNumber}
               </span>
             </div>
@@ -119,14 +119,14 @@ export const PrintLayout: React.FC<PrintLayoutProps> = ({ saleData }) => {
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.3fr 1fr', gap: '14px', marginTop: '12px', alignItems: 'start' }}>
           <div>
             <div className="field-row" style={{ marginBottom: '14px' }}>
-              <span style={{ fontSize: '12pt', width: '85px' }}>Total Rental<br />(Monthly)</span>
-              <span className="dotted-line" style={{ border: '1px solid #000', height: '28px', textAlign: 'center', lineHeight: '28px', fontSize: '12pt' }}>
+              <span style={{ fontSize: '13pt', width: '90px' }}>Total Rental<br />(Monthly)</span>
+              <span className="dotted-line" style={{ border: '1px solid #000', height: '30px', textAlign: 'center', lineHeight: '30px', fontSize: '13pt' }}>
                 {Math.round(saleData.totalRental).toLocaleString()}
               </span>
             </div>
             <div className="field-row" style={{ marginBottom: '14px' }}>
-              <span style={{ fontSize: '12pt', width: '85px' }}>Term</span>
-              <span className="dotted-line" style={{ border: '1px solid #000', height: '28px', textAlign: 'center', lineHeight: '28px', position: 'relative', fontSize: '12pt' }}>
+              <span style={{ fontSize: '13pt', width: '90px' }}>Term</span>
+              <span className="dotted-line" style={{ border: '1px solid #000', height: '30px', textAlign: 'center', lineHeight: '30px', position: 'relative', fontSize: '13pt' }}>
                 {saleData.term} <span style={{ position: 'absolute', right: '3px', top: '0', fontSize: '10pt', borderLeft: '1px solid #000', paddingLeft: '3px' }}>M</span>
               </span>
             </div>
