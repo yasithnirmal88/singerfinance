@@ -223,7 +223,7 @@ export const NewSalePage: React.FC = () => {
               <span className="font-semibold text-lg">New Sale Form</span>
             </Space>
             <span className="text-red-500 font-bold font-mono text-base bg-red-50 px-3 py-1 rounded">
-              Invoice No: {invoiceNo}
+              Invoice No: {invoiceNo.replace(/^U\s+/, '')}
             </span>
           </div>
         }

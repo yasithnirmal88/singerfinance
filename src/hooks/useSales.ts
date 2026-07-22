@@ -86,7 +86,7 @@ export const useSales = () => {
   };
 
   const generateNextInvoiceNo = () => {
-    const prefix = 'U ';
+    const prefix = '';
 
     const existing = sales.filter((s) => s.invoiceNo.startsWith(prefix));
     

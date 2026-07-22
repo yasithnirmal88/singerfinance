@@ -34,11 +34,11 @@ export const PrintLayout: React.FC<PrintLayoutProps> = ({ saleData }) => {
     <div className="print-only-container">
       <div className="document-frame" style={{ borderBottom: '3px double #333' }}>
         <div className="serial-number-block">
-          <span className="serial-number">{saleData.invoiceNo || '19471'}</span>
+          <span className="serial-number">{(saleData.invoiceNo || '19471').replace(/^U\s+/, '')}</span>
         </div>
 
         <div className="doc-header">
-          <img src="/Singer-Logo.png" alt="Singer Finance" style={{ height: '50px', width: 'auto', objectFit: 'contain', display: 'block', marginBottom: '2px' }} />
+          <img src="/Singer-Logo.png" alt="Singer Finance" style={{ height: '50px', width: 'auto', objectFit: 'contain', display: 'block', marginBottom: '8px' }} />
           <div className="company-title">Singer Finance (Lanka) PLC</div>
           <div className="company-address">No. 498, R. A. De Mel Mawatha, Colombo 03. Tel : 0112 400 400</div>
         </div>
@@ -145,7 +145,7 @@ export const PrintLayout: React.FC<PrintLayoutProps> = ({ saleData }) => {
         </div>
       </div>
 
-      <div className="document-frame" style={{ marginTop: '-12px' }}>
+      <div className="document-frame" style={{ marginTop: '-6px' }}>
         <div className="offer-letter-title">Offer Letter Group sale Facility</div>
 
         <div style={{ display: 'grid', gridTemplateColumns: '110px 6px 1fr', rowGap: '4px', fontSize: '7pt', marginBottom: '8px' }}>

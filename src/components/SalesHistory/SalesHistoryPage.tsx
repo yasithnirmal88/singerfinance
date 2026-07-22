@@ -75,7 +75,7 @@ export const SalesHistoryPage: React.FC = () => {
         exportRows.push({
           'EPF': s.epfNumber,
           'Name': s.customerName,
-          'ID': s.invoiceNo,
+          'ID': s.invoiceNo.replace(/^U\s+/, ''),
           'NIC': s.nic || '',
           'mobile': s.contactNumber,
           'Item': item.itemName,
@@ -116,7 +116,7 @@ export const SalesHistoryPage: React.FC = () => {
       dataIndex: 'invoiceNo',
       key: 'invoiceNo',
       sorter: (a: Sale, b: Sale) => a.invoiceNo.localeCompare(b.invoiceNo),
-      render: (text: string) => <span className="font-mono font-bold">{text}</span>
+      render: (text: string) => <span className="font-mono font-bold">{text.replace(/^U\s+/, '')}</span>
     },
     {
       title: 'Date',
@@ -235,7 +235,7 @@ export const SalesHistoryPage: React.FC = () => {
         title={
           <div className="flex justify-between items-center pr-6">
             <span className="font-bold text-lg">Invoice Details</span>
-            <span className="font-mono text-red-500 font-bold">{selectedSale?.invoiceNo}</span>
+            <span className="font-mono text-red-500 font-bold">{(selectedSale?.invoiceNo || '').replace(/^U\s+/, '')}</span>
           </div>
         }
         open={detailsModalVisible}
