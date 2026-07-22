@@ -38,9 +38,11 @@ export const PrintLayout: React.FC<PrintLayoutProps> = ({ saleData }) => {
         </div>
 
         <div className="doc-header">
-          <div className="company-title">Singer Finance (Lanka) PLC</div>
-          <div className="company-address">No. 498, R. A. De Mel Mawatha, Colombo 03. Tel : 0112 400 400</div>
-          <img src="/Singer-Logo.png" alt="Singer Finance" style={{ height: '50px', width: 'auto', objectFit: 'contain', display: 'block', margin: '4px auto 0' }} />
+          <img src="/Singer-Logo.png" alt="Singer Finance" style={{ height: '50px', width: 'auto', objectFit: 'contain' }} />
+          <div style={{ flex: 1 }}>
+            <div className="company-title">Singer Finance (Lanka) PLC</div>
+            <div className="company-address">No. 498, R. A. De Mel Mawatha, Colombo 03. Tel : 0112 400 400</div>
+          </div>
         </div>
 
         <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: '16px', marginTop: '6px' }}>
@@ -140,12 +142,12 @@ export const PrintLayout: React.FC<PrintLayoutProps> = ({ saleData }) => {
             </div>
           </div>
 
-          <div style={{ border: '1px solid #000', height: '150px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '6.5pt', textAlign: 'center', padding: '4px' }}>
+          <div style={{ border: '1px solid #000', height: '110px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '6.5pt', textAlign: 'center', padding: '4px' }}>
           </div>
         </div>
       </div>
 
-      <div className="document-frame" style={{ marginTop: '6px' }}>
+      <div className="document-frame" style={{ marginTop: '0px' }}>
         <div className="offer-letter-title">Offer Letter Group sale Facility</div>
 
         <div style={{ display: 'grid', gridTemplateColumns: '110px 6px 1fr', rowGap: '4px', fontSize: '7pt', marginBottom: '8px' }}>
