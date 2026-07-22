@@ -27,6 +27,7 @@ const DatabaseCard: React.FC<{
   onUpload: NonNullable<UploadProps['beforeUpload']>;
   onClear: () => void;
   onDownloadTemplate: () => void;
+  onDownload: () => void;
 }> = ({
   title,
   totalLabel,
@@ -37,6 +38,7 @@ const DatabaseCard: React.FC<{
   onUpload,
   onClear,
   onDownloadTemplate,
+  onDownload,
 }) => (
   <Card
     type="inner"
@@ -82,6 +84,18 @@ const DatabaseCard: React.FC<{
             {uploadLabel}
           </Button>
         </Upload>
+
+        <div className="mt-3 w-full">
+          <Button
+            icon={<DownloadOutlined />}
+            block
+            disabled={totalCount === 0 || loading}
+            onClick={onDownload}
+            className="border-emerald-600 text-emerald-600 hover:border-emerald-500 hover:text-emerald-500"
+          >
+            Download Database
+          </Button>
+        </div>
 
         <div className="mt-3 w-full">
           <Popconfirm
@@ -273,6 +287,44 @@ export const DataManagement: React.FC = () => {
     }
   };
 
+  // Download database as Excel
+  const handleDownloadCustomers = () => {
+    if (customers.length === 0) {
+      message.warning('No customer records to download.');
+      return;
+    }
+    const rows = customers.map(c => ({
+      'EPF Number': c.epfNumber,
+      'Customer Name': c.customerName,
+      'Institution': c.institution,
+      'Contact Number': c.contactNumber,
+      'NIC': c.nic || '',
+    }));
+    const worksheet = XLSX.utils.json_to_sheet(rows);
+    const workbook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(workbook, worksheet, 'Customers');
+    XLSX.writeFile(workbook, 'customer_database.xlsx');
+    message.success(`Exported ${customers.length} customer records.`);
+  };
+
+  const handleDownloadItems = () => {
+    if (items.length === 0) {
+      message.warning('No item records to download.');
+      return;
+    }
+    const rows = items.map(item => ({
+      'Model Number': item.modelNumber,
+      'Item Name': item.itemName,
+      'Cash Price': item.cashPrice,
+      'Rental': item.rental,
+    }));
+    const worksheet = XLSX.utils.json_to_sheet(rows);
+    const workbook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(workbook, worksheet, 'Items');
+    XLSX.writeFile(workbook, 'item_database.xlsx');
+    message.success(`Exported ${items.length} item records.`);
+  };
+
   // Download templates helper
   const downloadCustomerTemplate = () => {
     const templateData = [
@@ -325,6 +377,7 @@ export const DataManagement: React.FC = () => {
               onUpload={handleCustomerUpload}
               onClear={handleClearCustomers}
               onDownloadTemplate={downloadCustomerTemplate}
+              onDownload={handleDownloadCustomers}
             />
           </Col>
 
@@ -339,6 +392,7 @@ export const DataManagement: React.FC = () => {
               onUpload={handleItemUpload}
               onClear={handleClearItems}
               onDownloadTemplate={downloadItemTemplate}
+              onDownload={handleDownloadItems}
             />
           </Col>
         </Row>
