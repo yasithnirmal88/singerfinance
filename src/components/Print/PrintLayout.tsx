@@ -145,7 +145,7 @@ export const PrintLayout: React.FC<PrintLayoutProps> = ({ saleData }) => {
         </div>
       </div>
 
-      <div className="document-frame" style={{ marginTop: '-6px' }}>
+      <div className="document-frame" style={{ marginTop: '6px' }}>
         <div className="offer-letter-title">Offer Letter Group sale Facility</div>
 
         <div style={{ display: 'grid', gridTemplateColumns: '110px 6px 1fr', rowGap: '4px', fontSize: '7pt', marginBottom: '8px' }}>
