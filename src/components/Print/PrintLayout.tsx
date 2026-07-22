@@ -106,7 +106,7 @@ export const PrintLayout: React.FC<PrintLayoutProps> = ({ saleData }) => {
               </tr>
             ))}
             <tr>
-              <td colSpan={3} style={{ border: 'none', textAlign: 'right', paddingRight: '8px', fontWeight: 'bold', fontSize: '8pt' }}>TOTAL</td>
+              <td colSpan={3} style={{ border: 'none', textAlign: 'right', paddingRight: '8px', fontWeight: 'bold', fontSize: '10pt' }}>TOTAL</td>
               <td style={{ textAlign: 'right', paddingRight: '6px', fontWeight: 'bold' }}>
                 {saleData.totalCashPrice.toLocaleString([], { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
               </td>
@@ -116,24 +116,24 @@ export const PrintLayout: React.FC<PrintLayoutProps> = ({ saleData }) => {
           </tbody>
         </table>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.3fr 1fr', gap: '12px', marginTop: '12px', alignItems: 'start' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.3fr 1fr', gap: '14px', marginTop: '12px', alignItems: 'start' }}>
           <div>
-            <div className="field-row" style={{ marginBottom: '4px' }}>
-              <span style={{ fontSize: '8pt', width: '75px' }}>Total Rental<br />(Monthly)</span>
-              <span className="dotted-line" style={{ border: '1px solid #000', height: '18px', textAlign: 'center', lineHeight: '18px' }}>
+            <div className="field-row" style={{ marginBottom: '10px' }}>
+              <span style={{ fontSize: '11pt', width: '85px' }}>Total Rental<br />(Monthly)</span>
+              <span className="dotted-line" style={{ border: '1px solid #000', height: '26px', textAlign: 'center', lineHeight: '26px', fontSize: '11pt' }}>
                 {Math.round(saleData.totalRental).toLocaleString()}
               </span>
             </div>
-            <div className="field-row" style={{ marginBottom: '3px' }}>
-              <span style={{ fontSize: '9pt', width: '75px' }}>Term</span>
-              <span className="dotted-line" style={{ border: '1px solid #000', height: '16px', textAlign: 'center', lineHeight: '16px', position: 'relative' }}>
-                {saleData.term} <span style={{ position: 'absolute', right: '3px', top: '0', fontSize: '7pt', borderLeft: '1px solid #000', paddingLeft: '3px' }}>M</span>
+            <div className="field-row" style={{ marginBottom: '10px' }}>
+              <span style={{ fontSize: '11pt', width: '85px' }}>Term</span>
+              <span className="dotted-line" style={{ border: '1px solid #000', height: '26px', textAlign: 'center', lineHeight: '26px', position: 'relative', fontSize: '11pt' }}>
+                {saleData.term} <span style={{ position: 'absolute', right: '3px', top: '0', fontSize: '9pt', borderLeft: '1px solid #000', paddingLeft: '3px' }}>M</span>
               </span>
             </div>
             <div className="field-row">
-              <span style={{ fontSize: '8pt', width: '75px' }}>Interest Rate<br />(Nominal)</span>
-              <span className="dotted-line interest-rate-box" style={{ border: '1px solid #000', height: '16px', textAlign: 'center', lineHeight: '16px', position: 'relative' }}>
-                <span className="interest-rate-suffix" style={{ position: 'absolute', right: '3px', top: '0', fontSize: '7pt', borderLeft: '1px solid #000', paddingLeft: '3px' }}>%</span>
+              <span style={{ fontSize: '11pt', width: '85px' }}>Interest Rate<br />(Nominal)</span>
+              <span className="dotted-line interest-rate-box" style={{ border: '1px solid #000', height: '26px', textAlign: 'center', lineHeight: '26px', position: 'relative', fontSize: '11pt' }}>
+                <span className="interest-rate-suffix" style={{ position: 'absolute', right: '3px', top: '0', fontSize: '9pt', borderLeft: '1px solid #000', paddingLeft: '3px' }}>%</span>
               </span>
             </div>
           </div>
